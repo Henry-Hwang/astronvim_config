@@ -19,7 +19,6 @@ return {
 
   -- Set colorscheme to use
   colorscheme = "astrodark",
-  startinsert = false,
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -81,5 +80,10 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.api.nvim_create_autocmd(
+       { "BufWinEnter"},
+    -- { pattern = { "*.txt", "*.md", "*.tex","*.c", "*.cpp" }, command = "stopinsert" }
+       { pattern = { "*.*" }, command = "stopinsert" }
+    )
   end,
 }
