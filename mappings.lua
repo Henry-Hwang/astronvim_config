@@ -40,6 +40,7 @@ return {
         vim.cmd("%s/" .. word .. "/" .. rp .. "/g")
       end,
     },
+  }
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
