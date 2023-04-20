@@ -18,12 +18,11 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- thiswith:  is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    ["<leader>ef"] = { "<cmd>Neotree float<cr>", desc = "Neotree float" },
     ["<leader>r"] = { ":%s/<C-r><C-w>/<C-r><C-w>/gc", desc = "Replace word" },
     ["ff"] = { "/<C-r><C-w>", desc = "Search word"},
-    ["<C-a>"] = { ":Telescope buffers<cr>", desc = "Show buffers" },  -- change description but the same command
-    ["<C-s>"] = { ":Telescope find_files<cr>", desc = "Find files" },  -- change description but the same command
-    ["<C-e>"] = { ":Neotree %:h float", desc = "Path to file" },  -- change description but the same command
+    ["<C-a>"] = { "<cmd>Telescope buffers<cr>", desc = "Show buffers" },  -- change description but the same command
+    ["<C-s>"] = { "<cmd>Telescope find_files<cr>", desc = "Find files" },  -- change description but the same command
+    ["<C-e>"] = { "<cmd>Neotree %:h float<cr>", desc = "Path to file" },  -- change description but the same command
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
     -- quick save
