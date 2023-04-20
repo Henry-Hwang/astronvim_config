@@ -18,7 +18,6 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- thiswith:  is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
-    
     ["<leader>r"] = { ":%s/<C-r><C-w>/<C-r><C-w>/gc", desc = "Replace word" },
     ["ff"] = { "/<C-r><C-w>", desc = "Search word"},
     ["<C-s>"] = { ":let @a='' <bar> g/<C-r><C-w>/yank A", desc = "Handle lines with [PATTEN] " },
