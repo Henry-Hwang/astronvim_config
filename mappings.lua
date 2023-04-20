@@ -18,13 +18,19 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- thiswith:  is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+    
     ["<leader>r"] = { ":%s/<C-r><C-w>/<C-r><C-w>/gc", desc = "Replace word" },
     ["ff"] = { "/<C-r><C-w>", desc = "Search word"},
+    ["<C-s>"] = { ":let @a='' <bar> g/<C-r><C-w>/yank A", desc = "Handle lines with [PATTEN] " },
     ["<C-a>"] = { "<cmd>Telescope buffers<cr>", desc = "Show buffers" },  -- change description but the same command
-    ["<C-s>"] = { "<cmd>Telescope find_files<cr>", desc = "Find files" },  -- change description but the same command
+    ["<C-f>"] = { "<cmd>Telescope find_files<cr>", desc = "Find files" },  -- change description but the same command
     ["<C-e>"] = { "<cmd>Neotree %:h float<cr>", desc = "Path to file" },  -- change description but the same command
     ["\\"] = { "<cmd>split<cr>", desc = "Horizontal split" },
     ["|"] = { "<cmd>vsplit<cr>", desc = "Vertical split" },
+    -- ["<Leader>y"] = { "\"+y", desc = "Copy to system clipboard(+)"},
+    ["<Leader>yy"] = {":<C-u>execute 'normal! ' . v:count1 . 'yy' | let @+ = @0<cr>", desc = "Copy to system clipboard" },
+    ["<Leader>p"] = { ":put +<cr>", desc = "Paste from register(+)" },
+
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>dr"] = {
