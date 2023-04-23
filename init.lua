@@ -80,8 +80,6 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-    vim.opt.tabstop = 4
-    vim.opt.shiftwidth = 4
     vim.api.nvim_create_autocmd(
        { "BufWinEnter"},
     -- { pattern = { "*.txt", "*.md", "*.tex","*.c", "*.cpp" }, command = "stopinsert" }
