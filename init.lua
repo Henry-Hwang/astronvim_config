@@ -50,7 +50,20 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+      "svls"
     },
+    config = {
+      svls = function()
+        return {
+          cmd = { "svls" },
+          filetypes = { "systemverilog" },
+          root_dir = require("lspconfig.util").root_pattern("pack.pl"),
+          -- on_attach = function(client)
+          --   print('SVLS started!')
+          -- end
+        }
+      end,
+     },
   },
 
   -- Configure require("lazy").setup() options
