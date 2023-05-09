@@ -37,6 +37,35 @@ return {
         vim.cmd("%s/" .. word .. "/" .. rp .. "/g")
       end,
     },
+    -- sort keep, delete
+    ["<leader>;k"] = {
+      function ()
+      local pattern = vim.fn.input("Pattern: ")
+      sort.regex_keep_match(pattern)
+      end,
+      desc = "Sort keep lines"
+    },
+    ["<leader>;d"] = {
+      function ()
+      local pattern = vim.fn.input("regular expression: ")
+      sort.regex_keep_match(pattern)
+      end,
+      desc = "Sort delete lines"
+    },
+    ["<leader>;t"] = {
+      function ()
+      sort.trim_buffer()
+      end,
+      desc = "Sort trim buffer"
+    },
+    ["<leader>;o"] = {
+      function ()
+        print("Test ...")
+      end,
+      desc = "Sort Test"
+    },
+  },
+
   },
   t = {
     -- setting a mapping to false will disable it
