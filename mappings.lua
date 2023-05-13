@@ -22,7 +22,7 @@ return {
     ["<leader>r"] = { ":%s/<C-r><C-w>/<C-r><C-w>/gc", desc = "Replace word" },
     ["ff"] = { "/<C-r><C-w>", desc = "Search word"},
     ["<C-s>"] = { ":let @a='' <bar> g/<C-r><C-w>/yank A", desc = "Handle lines with [PATTEN] " },
-    ["<C-a>"] = { "<cmd>Telescope buffers<cr>", desc = "Show buffers" },  -- change description but the same command
+    ["<C-a>"] = { ":lua require('telescope.builtin').buffers({ sort_lastused = true, ignore_current_buffer = true })<cr>", desc = "Show buffers" },
     ["<C-f>"] = { "<cmd>Telescope find_files<cr>", desc = "Find files" },  -- change description but the same command
     -- ["<C-e>"] = { "<cmd>Neotree %:h float<cr>", desc = "Path to file" },  -- change description but the same command
     -- ["<Leader>y"] = { "\"+y", desc = "Copy to system clipboard(+)"},
