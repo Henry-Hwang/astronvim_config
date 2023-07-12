@@ -94,9 +94,14 @@ return {
     --   },
     -- }
     vim.api.nvim_create_autocmd(
-       { "BufWinEnter"},
-    -- { pattern = { "*.txt", "*.md", "*.tex","*.c", "*.cpp" }, command = "stopinsert" }
-       { pattern = { "*.*" }, command = "stopinsert" }
-    )
+      {"FileType"}, {
+        pattern={"qf"},
+        command=[[nnoremap <buffer> <CR> <CR>:cclose<CR>]]
+      })
+
+    vim.api.nvim_create_autocmd({ "BufWinEnter"}, { 
+        pattern = { "*.*" },
+        command = "stopinsert"
+    })
   end,
 }
