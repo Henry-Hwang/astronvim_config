@@ -93,6 +93,10 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.on_key(
+      nil,
+      vim.api.nvim_get_namespaces()["auto_hlsearch"]
+    )
     vim.api.nvim_create_autocmd(
       {"FileType"}, {
         pattern={"qf"},
